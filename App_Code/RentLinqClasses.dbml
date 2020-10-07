@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Rent Publish" Class="RentLinqClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SSI-3\SSI2008;Initial Catalog=&quot;Rent Publish&quot;;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Rent_PublishConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblCustomers" Member="tblCustomers">
+    <Type Name="tblCustomer">
+      <Column Name="Gen_NOTES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Customer Number]" Member="Customer_Number" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Customer Name]" Member="Customer_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Address 1]" Member="Address_1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Address 2]" Member="Address_2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Phone Number]" Member="Phone_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Tax Code]" Member="Tax_Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NOTES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Toll Free Number]" Member="Toll_Free_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Pager Number]" Member="Pager_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Home Number]" Member="Home_Number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Tax ID]" Member="Tax_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Terms" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HasSpecialPriceBook" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="[Vendor ID]" Member="Vendor_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Supreme EDI ID]" Member="Supreme_EDI_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Buyer ID]" Member="Buyer_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Template" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EDIApproverID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EDIPONumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EDICustomer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EDIFileCreateLocation" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="EDIRunProcedure" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EDIFileFieldNameTitle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EDINonCatalogNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParentCustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UseParentPricing" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PassedCreditCheck" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreditCheckUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreditCheckDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CustomerStatusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ShowPCOnInvoice" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblVendors" Member="tblVendors">
+    <Type Name="tblVendor">
+      <Column Name="VendorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VendorName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TermsID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultDiscount" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="POVendor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VendorNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DefaultPODocumentCodeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TCVendor" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ApprovedVendorTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContactEmailAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreateUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7800961c-4179-4035-be2c-859caff0be67" absoluteBounds="0.5, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/DataClassesDataContext/tblEmployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e003349b-f945-411f-a1c8-ec461f244780" absoluteBounds="0.51500000000000057, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b9308505-7a64-4314-b408-0ed557d1f212" absoluteBounds="2.625, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClassesDataContext/tblOutofOfficeDest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aaf6365c-9998-45ea-acce-9c18c1ebfbf2" absoluteBounds="2.64, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba288dd5-ba81-4b19-9633-d90b33ce960e" absoluteBounds="5.375, 1, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DataClassesDataContext/tblOutOfOfficeLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b064a322-f2af-4f79-b903-d7ee4cbf5aaf" absoluteBounds="5.39, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

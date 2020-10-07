@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs"
+    Inherits="MasterPage2" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="filter: progid:DXImageTransform.Microsoft.Gradient(endColorstr='#003366', startColorstr='#C0CFE2', gradientType='0');">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 88px;
+            width: 100%;
+        }
+        body
+        {
+            overflow-x: hidden;
+        }
+        .roundedtable
+        {
+            border-collapse: separate;
+            border: solid white 3px;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager2" runat="server" />
+    <div id="header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Graphics/Webheader(newest).png"
+                                    Width="100%" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="padding-top: 0px">
+        <table>
+            <tr valign="top">
+                <td style="border-color: White; height: 650px; background-color: #FFCC00;" class="roundedtable">
+                    <table>
+                        <tr>
+                            <td align="right">
+                                <asp:Label ID="Label1" runat="server" Text="Label" ForeColor="White" Font-Size="XX-Large">
+                                        <strong><i>&nbsp;&nbsp;&nbsp;&nbsp;Menu</i></strong>
+                                </asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:HiddenField ID="HiddenField1" runat="server" />
+                    <telerik:RadMenu ID="RadMenu2" runat="server" Flow="Vertical" EnableOverlay="true"
+                        EnableAutoScroll="true" EnableRoundedCorners="true" EnableScreenBoundaryDetection="true"
+                        EnableShadows="true" DataFieldID="ID" DataFieldParentID="ParentID" DataTextField="MenuDesc"
+                        DataNavigateUrlField="MenuCommand" OnItemCreated="RadMenu1_ItemCreated" DataSourceID="SqlDataSourceMenu">
+                    </telerik:RadMenu>
+                     <asp:SqlDataSource ID="SqlDataSourceMenu" runat="server" SelectCommandType="Text"
+                        SelectCommand="sp_Sys_WebMenu @UserID" DataSourceMode="DataReader">
+                        <SelectParameters>
+                            <asp:ControlParameter ControlID="HiddenFieldUser" PropertyName="Value" Name="UserID" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
+                </td>
+                <td style="width: 87%; padding-left: 6%" align="center">
+                    <div>
+                        <br />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:Panel ID="Panel2" runat="server" BackColor="White">
+                            <asp:Table ID="Table3" runat="server">
+                                <asp:TableRow>
+                                    <asp:TableCell HorizontalAlign="Left" BackColor="White">
+                                        <asp:ContentPlaceHolder ID="Body" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </asp:TableCell>
+                                </asp:TableRow>
+                            </asp:Table>
+                            <br />
+                            <br />
+                            <br />
+                        </asp:Panel>
+                        <asp:RoundedCornersExtender ID="RoundedCornersExtender2" runat="server" TargetControlID="Panel2"
+                            Radius="6" BorderColor="#FFCC00">
+                        </asp:RoundedCornersExtender>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="display: none">
+        <asp:Table ID="Table1" runat="server" Style="margin-top: 0px">
+            <asp:TableRow ID="Row" VerticalAlign="Top">
+                <asp:TableCell BorderColor="White" BackColor="#FFCC00" Height="700px">
+                    <table>
+                        <tr>
+                            <td align="right">
+                                <asp:Label ID="Label2" runat="server" Text="Label" ForeColor="White" Font-Size="XX-Large">
+                                        <strong><i>&nbsp;&nbsp;&nbsp;&nbsp;Menu</i></strong>
+                                </asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:HiddenField ID="HiddenFieldUser" runat="server" />
+                    <telerik:RadMenu ID="RadMenu1" runat="server" Flow="Vertical" EnableOverlay="true"
+                        EnableAutoScroll="true" EnableRoundedCorners="true" EnableScreenBoundaryDetection="true"
+                        EnableShadows="true" DataFieldID="ID" DataFieldParentID="ParentID" DataTextField="MenuDesc"
+                        DataNavigateUrlField="MenuCommand" OnItemCreated="RadMenu1_ItemCreated" DataSourceID="SqlDataSourceMenu">
+                    </telerik:RadMenu>
+                   
+                </asp:TableCell>
+                <asp:TableCell Width="87%" HorizontalAlign="Center" Style="padding-left: 6%">
+                    <div>
+                        <br />
+                        <asp:ContentPlaceHolder ID="Title" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:Panel ID="Panel1" runat="server" BackColor="White">
+                            <asp:Table ID="content" runat="server">
+                                <asp:TableRow>
+                                    <asp:TableCell HorizontalAlign="Left" BackColor="White">
+                                        <asp:ContentPlaceHolder ID="Bodys" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </asp:TableCell>
+                                </asp:TableRow>
+                            </asp:Table>
+                            <br />
+                            <br />
+                            <br />
+                        </asp:Panel>
+                        <asp:RoundedCornersExtender ID="RoundedCornersExtender1" runat="server" TargetControlID="Panel1"
+                            Radius="6" BorderColor="#FFCC00">
+                        </asp:RoundedCornersExtender>
+                    </div>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+    </div>
+    </form>
+</body>
+</html>

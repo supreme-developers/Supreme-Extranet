@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.125" name="RentLinqClasses">
+  <DataContextMoniker Name="/RentLinqClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1be3ddba-3d67-491a-b8b0-138e0522042c" absoluteBounds="0.875, 0.625, 2, 9.2706526692708326">
+      <DataClassMoniker Name="/RentLinqClassesDataContext/tblCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28fc7b6d-3605-4317-9334-e531a8d382d3" absoluteBounds="0.89000000000000012, 1.085, 1.9700000000000002, 8.7106526692708321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91fc21ce-0436-4bb9-ba7e-26af266dd939" absoluteBounds="4.25, 1.125, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/RentLinqClassesDataContext/tblVendor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc59157e-623e-41d1-b508-30f397cd66a2" absoluteBounds="4.265, 1.585, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

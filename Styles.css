@@ -1,0 +1,328 @@
+﻿body
+{
+    
+}
+
+.modalBackground
+{
+ 
+ -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#C0C0C0)";
+ opacity: 0.5;
+}
+
+.ModalWindow
+{
+  border: solid1px #FFCC00;
+  background:#003366;
+  padding: 0px10px10px10px;
+  position:absolute;
+  top:-1000px;
+  
+}
+.bttnBlue
+{
+    background: #003366;
+    color: White;
+    cursor:pointer;
+}
+.bttnWhite
+{
+    background: White;
+    color: #003366;
+    cursor:pointer;
+    font-weight:bold;
+}
+.bttnCancel
+{
+    background: White url(Graphics/large-cancel.gif) 5px 50% no-repeat;
+    color:red;
+    padding-left: 28px; 
+   
+}
+.bttnCancel
+{
+    background: White url(Graphics/large-cancel.gif) 5px 50% no-repeat;
+    color:red;
+    padding-left: 28px; 
+    cursor:pointer;
+   
+}
+.Labels
+{
+    color: #003366;
+    font-weight: normal;
+    font-family: Segoe UI;
+}
+.HeaderLabel
+{
+    color: #204D7A;
+    font-weight: bold;
+    font-size:30px;
+    font-family:Vrinda;
+}
+   
+.bttnInsert
+{
+    background: White url(Graphics/add.jpg) 5px 50% no-repeat;
+    color: #003366;
+    font-weight:bold;
+    padding-left: 28px; 
+    cursor:pointer;
+    clear: left;
+}
+   
+.bttncheckin
+{
+    background: #003366 url(Graphics/green_check_mark.gif) 5px 50% no-repeat;
+    color: White;
+    cursor:pointer;
+    padding-left: 20px; 
+}
+.bttncheckinWhite
+{
+    background: White  url(Graphics/green_check_mark.gif) 5px 50% no-repeat;
+    color: #003366;
+    cursor:pointer;
+    padding-left: 20px; 
+}
+   
+.bttncheckout
+{
+    background: #003366 url(Graphics/large-cancel.gif) 5px 50% no-repeat;
+    color: White;
+    cursor:pointer;
+    padding-left: 20px; 
+}
+
+.CustomComboBoxStyle .ajax__combobox_textboxcontainer input {
+    background-color: #003366;
+    border: solid 1px Blue;
+    border-right: 0px none;
+    color: White;
+}
+.CustomComboBoxStyle .ajax__combobox_buttoncontainer button {
+    background-color: White;
+    border: solid 1px Blue;
+}
+.AjaxToolkitStyle .ajax__combobox_inputcontainer .ajax__combobox_textboxcontainer input
+{
+    background-image: url(Graphics/toolkit-bg.gif);
+    background-position: top left;
+    border: 0px none;
+    color: #FFFFFF;
+    padding: 4px 0px 3px 5px;
+    font-size: 12px;
+    height: 16px;
+}
+.AjaxToolkitStyle .ajax__combobox_inputcontainer .ajax__combobox_buttoncontainer button
+{
+    background-image: url(Graphics/toolkit-arrow.gif);
+    background-position: top left;
+    border: 0px none;
+    height: 23px;
+    width: 23px;
+}
+.AjaxToolkitStyle .ajax__combobox_itemlist
+{
+    border-color: #0F2543;
+    background-color: White;
+}
+
+.bttnback
+{
+    background: White  url(Graphics/small_green_back_button.gif) 1px 50% no-repeat;
+    color: #003366;
+    cursor:pointer;
+    padding-left: 35px; 
+}
+.MyCalendar .ajax__calendar_container {
+    border:1px solid #003366;
+    background-color: #003366 ;
+    color: #FFCC00;
+}
+
+.pagination 
+{
+    font-size: 80%;
+}
+
+.pagination a {
+    text-decoration: none;
+    border: solid 1px #AAE;
+    color: #15B;
+}
+
+.pagination a, .pagination span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.5em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.pagination .current {
+    background: #26B;
+    color: #fff;
+    border: solid 1px #AAE;
+}
+
+.pagination .current.prev, .pagination .current.next{
+    color:#999;
+    border-color:#999;
+    background:#fff;
+}
+
+
+/*Accordion Styles Begin*/
+.accordionHeader
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #2E4d7B;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeader a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeader a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionHeaderSelected
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #5078B3;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeaderSelected a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeaderSelected a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionContent
+{
+    background-color: #D3DEEF;
+    border: 1px dashed #2F4F4F;
+    border-top: none;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+/*Accordion Styles End*
+
+/*watermark Styles Begin*/
+
+.watermarked {
+	height:20px;
+	width:150px;
+	padding:2px 0 0 2px;
+	border:1px solid #BEBEBE;
+	background-color:#F0F8FF;
+	color:gray;
+}	
+
+   
+   
+   #newsletterOptions
+{
+    padding-top: 15px;
+}
+
+#newsletterOptions input
+{
+    margin-left: 50px;
+}
+
+.validationSummary LI
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-top: 0px;
+    list-style-type: none;
+}
+.validationSummary UL
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+.PrintCertLabel
+{
+    font-size:14px;
+}
+
+table.gridtable {
+	font-size:11px;
+	color: Black;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	
+}
+
+.slide {
+    /* We will show the slides with javascript */
+    display: none;
+}
+
+
+.imageDetailsHeader {
+    font: bold 16px Arial, Verdana, Helvetica, Sans-serif;
+    color: #666666;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+.details {
+    font: normal 11px Arial, Verdana, Helvetica, Sans-serif;
+    color: #666666;
+    margin-left: 30px;
+    width: 230px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+

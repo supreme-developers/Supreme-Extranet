@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageWebApps.master.cs"
+    Inherits="MasterPage2" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="filter: progid:DXImageTransform.Microsoft.Gradient(endColorstr='#003366', startColorstr='#C0CFE2', gradientType='0');">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 88px;
+            width: 100%;
+        }
+          body
+        {
+            background: -webkit-radial-gradient(center, circle farthest-corner, #003366 0%, #C0CFE2  100%); /* for Chrome and Safari 003366*/
+             background: -ms-radial-gradient(center, circle farthest-corner, #003366 0%, #C0CFE2 95%); 
+            background: -moz-radial-gradient(center, circle farthest-corner, #003366 0%,  #C0CFE2 95%); /* for Firefoex * C0CFE2/
+            /* For IE10 */
+            background: -o-linear-gradient(top, #680000, Black); /* For Opera */
+        }
+        .roundedtable
+        {
+            border-collapse: separate;
+            border: solid white 3px;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+   <asp:ToolkitScriptManager ID="ToolkitScriptManager2" runat="server" />
+    <div id="header">
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td>
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Graphics/Webheader(newest).png"
+                                    Width="100%" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <center>
+   <div style="padding-top: 0px">
+        <table width="70%"  style="height:1000px">
+            <tr valign="top">
+                
+                <td  align="center">
+                    <div>
+                        <br />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder><br /><br />
+                        <asp:Panel ID="Panel2" runat="server" BackColor="White" BorderColor="#FFCC00" >
+                            <asp:Table ID="Table3" runat="server">
+                                <asp:TableRow>
+                                    <asp:TableCell HorizontalAlign="Left" BackColor="White" >
+                                        <asp:ContentPlaceHolder ID="Body" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </asp:TableCell>
+                                </asp:TableRow>
+                            </asp:Table>
+                            <br />
+                            <br />
+                            <br />
+
+                        </asp:Panel>
+                        <asp:DropShadowExtender ID="DropShadowExtender1" runat="server" TargetControlID="Panel2" Rounded="true" Radius="50" Opacity="10" TrackPosition="false">
+                        </asp:DropShadowExtender>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </center>
+    </form>
+</body>
+</html>

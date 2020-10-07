@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Rent Test" Class="MenuSystemDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SSI-3\SSI2008;Initial Catalog=&quot;Rent Test&quot;;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Rent DevConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblSys_MenuFolders" Member="tblSys_MenuFolders">
+    <Type Name="tblSys_MenuFolder">
+      <Column Name="FolderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FolderName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubOfID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SmallIcon" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LargeIcon" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Web" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tblSys_MenuFolder_tblSys_MenuChoice" Member="tblSys_MenuChoices" ThisKey="FolderID" OtherKey="FolderID" Type="tblSys_MenuChoice" />
+      <Association Name="tblSys_MenuFolder_tblSys_Folder_Group_Matrix" Member="tblSys_Folder_Group_Matrixes" ThisKey="FolderID" OtherKey="FolderID" Type="tblSys_Folder_Group_Matrix" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSys_MenuChoices" Member="tblSys_MenuChoices">
+    <Type Name="tblSys_MenuChoice">
+      <Column Name="MenuChoiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuChoiceDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FolderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CommandLine" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="RunType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IconName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SystemObjectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblSys_MenuChoice_tblSys_MenuChoice_Group_Matrix" Member="tblSys_MenuChoice_Group_Matrixes" ThisKey="MenuChoiceID" OtherKey="MenuChoiceID" Type="tblSys_MenuChoice_Group_Matrix" />
+      <Association Name="tblSys_MenuFolder_tblSys_MenuChoice" Member="tblSys_MenuFolder" ThisKey="FolderID" OtherKey="FolderID" Type="tblSys_MenuFolder" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSys_MenuChoice_Group_Matrix" Member="tblSys_MenuChoice_Group_Matrixes">
+    <Type Name="tblSys_MenuChoice_Group_Matrix">
+      <Column Name="MenuChoiceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tblSys_MenuChoice_tblSys_MenuChoice_Group_Matrix" Member="tblSys_MenuChoice" ThisKey="MenuChoiceID" OtherKey="MenuChoiceID" Type="tblSys_MenuChoice" IsForeignKey="true" />
+      <Association Name="tblSys_Group_tblSys_MenuChoice_Group_Matrix" Member="tblSys_Group" ThisKey="GroupID" OtherKey="GroupID" Type="tblSys_Group" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSys_Groups" Member="tblSys_Groups">
+    <Type Name="tblSys_Group">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SystemReserved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tblSys_Group_tblSys_MenuChoice_Group_Matrix" Member="tblSys_MenuChoice_Group_Matrixes" ThisKey="GroupID" OtherKey="GroupID" Type="tblSys_MenuChoice_Group_Matrix" />
+      <Association Name="tblSys_Group_tblSys_Group_User_Matrix" Member="tblSys_Group_User_Matrixes" ThisKey="GroupID" OtherKey="GroupID" Type="tblSys_Group_User_Matrix" />
+      <Association Name="tblSys_Group_tblSys_Folder_Group_Matrix" Member="tblSys_Folder_Group_Matrixes" ThisKey="GroupID" OtherKey="GroupID" Type="tblSys_Folder_Group_Matrix" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSys_Group_User_Matrix" Member="tblSys_Group_User_Matrixes">
+    <Type Name="tblSys_Group_User_Matrix">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tblSys_Group_tblSys_Group_User_Matrix" Member="tblSys_Group" ThisKey="GroupID" OtherKey="GroupID" Type="tblSys_Group" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSys_Folder_Group_Matrix" Member="tblSys_Folder_Group_Matrixes">
+    <Type Name="tblSys_Folder_Group_Matrix">
+      <Column Name="GroupID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FolderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="tblSys_Group_tblSys_Folder_Group_Matrix" Member="tblSys_Group" ThisKey="GroupID" OtherKey="GroupID" Type="tblSys_Group" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="tblSys_MenuFolder_tblSys_Folder_Group_Matrix" Member="tblSys_MenuFolder" ThisKey="FolderID" OtherKey="FolderID" Type="tblSys_MenuFolder" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

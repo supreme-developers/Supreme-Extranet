@@ -1,0 +1,99 @@
+﻿body {
+    height: 100%;
+    background-repeat: no-repeat;
+    /*background-image: url('../Graphics/Rig.jpg');*/
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+/*.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}*/
+
+/*
+ * Card component
+ */
+.card {
+    
+    background-color: rgb(247, 247, 247);
+    opacity :.9;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 150px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 170px;
+    height: 150px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius: 0%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+ .txtBox{
+             font-family: 'Open Sans' , sans-serif;
+              border: 0 !important;
+              border-bottom: 1px solid black !important;
+              outline: 0 !important;
+              font-size: 25px;
+              font-style:italic; 
+              margin-bottom: 15px !important;     
+       }
+           :webkit-input-placeholder {
+              color: #0D3D6D;
+              font-weight:100;
+            }
+           ::-moz-placeholder { /* Firefox 19+ */
+              color: #0D3D6D;
+              font-weight:100;
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+              color: #0D3D6D;
+              font-weight:100;
+            }
+            :-moz-placeholder { /* Firefox 18- */
+              color: #0D3D6D;
+              font-weight: 100;
+            }
+
+   
+    @media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+
+        .card-container.card {
+    max-width: 350px;
+    padding: 10px 10px;
+}
+
+}

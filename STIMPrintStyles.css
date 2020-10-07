@@ -1,0 +1,150 @@
+﻿@media print  
+{
+   
+     body  {
+                visibility: hidden ;
+            }
+    html
+    {
+        visibility: hidden ;
+    }
+    #Printmeonly {
+        visibility: visible;
+    }
+   
+    hr.bigLine
+    {
+        clear: both;
+        width: 100%;
+        background-color: Black;
+        height: 4px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: Black;
+    }
+    
+     hr.mediumLine
+    {
+        clear: both;
+        width: 250px;
+        background-color: Black;
+        height: 1px;
+        color: Black;
+        padding-bottom:30px;
+    }
+    
+    hr.smallLine
+    {
+        clear: both;
+        width: 70px;
+        background-color: Black;
+        height: 1px;
+        color: Black;
+    }
+    
+    .horizontalRule
+    {
+        clear: both;
+        width: 100%;
+        background-color: Black;
+        height: 2px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    div.horizontalRuleSign
+    {
+        clear: both;
+        width: 100%;
+        background-color: Black;
+        height: 1px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    div.blank
+    {
+        clear: both;
+        width: 100px;
+        background-color: Black;
+        height: 1px;
+    }
+    div.printCustomer
+    {
+        clear: both;
+        width: 250px;
+        background-color: Black;
+        height: 1px;
+    }
+    .PrintCertLabel
+    {
+        font-size:20px;
+    }
+}
+ @media screen
+{
+    hr.bigLine
+    {
+        clear: both;
+        width: 100%;
+        background-color: Black;
+        height: 4px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: Black;
+                        
+    }
+                    
+    hr.smallLine
+    {
+        clear: both;
+        width: 70px;
+        background-color: Black;
+        height: 1px;
+        color: Black;
+                        
+    }
+    
+    hr.mediumLine
+    {
+        clear: both;
+        width: 180px;
+        background-color: Black;
+        height: 1px;
+        color: Black;
+    }
+    .horizontalRule
+        {
+            clear: both;
+            width: 100%;
+            background-color: Black;
+            height: 2px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            visibility: visible;
+        }
+    div.horizontalRuleSign
+        {
+            clear: both;
+            width: 100%;
+            background-color: Black;
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    div.blank
+        {
+            clear: both;
+            width: 100px;
+            background-color: Black;
+            height: 1px;
+        }
+    div.printCustomer
+        {
+            clear: both;
+            width: 250px;
+            background-color: Black;
+            height: 1px;
+        }
+
+}
+            
+             

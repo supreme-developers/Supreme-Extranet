@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+/// <summary>
+/// Summary description for Menu
+/// </summary>
+public class Menu
+{
+    #region Private Variables
+
+    private int _MenuChoiceID;
+    private string _MenuChoiceDescription;
+    private int _FolderID;
+    private int _SortOrder;
+    private string _CommandLine;
+    private int _RunType;
+    private string _IconName;
+    private int _SystemObjectID;
+    private bool _Web; 
+
+    #endregion
+    #region Constructors
+    public Menu()
+	{
+		//
+		// TODO: Add constructor logic here
+		//
+	}
+     public Menu(int MenuChoiceID, string MenuChoiceDescription, int FolderId, int SortOrder, string CommandLine,int RunType, string IconName, int SystemObjectID, bool Web )
+        {
+            this._MenuChoiceID = MenuChoiceID;
+            this.MenuChoiceDescription = MenuChoiceDescription;
+            this._FolderID = FolderId;
+            this._SortOrder = SortOrder;
+            this._CommandLine = CommandLine;
+            this._IconName = IconName;
+            this._SystemObjectID = SystemObjectID;
+            this._Web = Web;
+        }
+    public detailFolder(
+        #endregion
+
+    #region Public Properties
+    public int MenuChoiceID { get { return _MenuChoiceID; } set { _MenuChoiceID = value; } }
+    public string MenuChoiceDescription { get { return _MenuChoiceDescription; } set { _MenuChoiceDescription = value; } }
+    public int FolderID { get { return _FolderID; } set { _FolderID = value; } }
+    public int SortOrder{ get { return _SortOrder; } set { _SortOrder = value; } }
+    public string CommandLine { get { return _CommandLine; } set { _CommandLine = value; } }
+    public int RunType { get { return _RunType; } set { _RunType = value; } }
+    public string IconName { get { return _IconName; } set { _IconName = value; } }
+    public int SystemObjectID { get { return _SystemObjectID; } set { _SystemObjectID = value; } }
+    public bool Web { get { return _Web; } set { _Web = value; } }
+    #endregion
+}

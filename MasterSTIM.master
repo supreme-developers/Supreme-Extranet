@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterSTIM.master.cs" Inherits="MasterSTIM" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <link href="../Styles.css" rel="Stylesheet" type="text/css"  />
+ <link href="../STIMPrintStyles.css" rel="Stylesheet" type="text/css"  />
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="filter: progid:DXImageTransform.Microsoft.Gradient(endColorstr='#003366', startColorstr='#DCE0EB', gradientType='0');">
+<head id="Head1" runat="server">   
+   
+    <center>
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Graphics/STIMSitebanner.jpg" Width="100%" Height="100" />
+       
+    </center>
+    <style type="text/css">
+          body
+        {
+            background: -webkit-radial-gradient(center, circle farthest-corner, #003366 0%, #C0CFE2  100%); /* for Chrome and Safari 003366*/
+             background: -ms-radial-gradient(center, circle farthest-corner, #003366 0%, #C0CFE2 95%); 
+            background: -moz-radial-gradient(center, circle farthest-corner, #003366 0%,  #C0CFE2 95%); /* for Firefoex * C0CFE2/
+            /* For IE10 */
+            background: -o-linear-gradient(top, #680000, Black); /* For Opera */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <form id="form1" runat="server">
+  
+    <center>
+   <div style="padding-top: 0px">
+        <table width="80%">
+            <tr valign="top">
+                
+                <td  align="center">
+                    <div>
+                        <br />
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:Panel ID="Panel2" runat="server" BackColor="White">
+                            <asp:Table ID="Table3" runat="server">
+                                <asp:TableRow>
+                                    <asp:TableCell HorizontalAlign="Left" BackColor="White">
+                                        <asp:ContentPlaceHolder ID="Body" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </asp:TableCell>
+                                </asp:TableRow>
+                            </asp:Table>
+                            <br />
+                            <br />
+                            <br />
+                        </asp:Panel>
+                        <asp:RoundedCornersExtender ID="RoundedCornersExtender2" runat="server" TargetControlID="Panel2"
+                            Radius="6" BorderColor="#FFCC00">
+                        </asp:RoundedCornersExtender>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </center>
+    </form>
+</body>
+</html>

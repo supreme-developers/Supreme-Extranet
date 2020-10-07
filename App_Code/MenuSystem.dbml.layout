@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.25" name="MenuSystem">
+  <DataContextMoniker Name="/MenuSystemDataContext" />
+  <nestedChildShapes>
+    <classShape Id="56d61225-3b9b-4b87-9133-d929e14a7ffc" absoluteBounds="0.75, 6.875, 2, 2.1554996744791657">
+      <DataClassMoniker Name="/MenuSystemDataContext/tblSys_MenuFolder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8684358-ae11-49d8-87bc-bcea89540c2b" absoluteBounds="0.765, 7.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03a1020f-1dcf-4d88-8ea0-95b15bb81607" absoluteBounds="0.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MenuSystemDataContext/tblSys_MenuChoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11b82615-8cfd-45ae-9026-db55b012bc9e" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3e1c0c8-58ed-480f-a61b-e4436a13fef2" absoluteBounds="3.5, 4.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MenuSystemDataContext/tblSys_MenuChoice_Group_Matrix" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40d6dd65-8909-40b6-a16a-57738d3b0314" absoluteBounds="3.515, 4.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da861ad4-cc67-4c35-bef4-10c65e61d760" absoluteBounds="0.75, 4.25, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/MenuSystemDataContext/tblSys_Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b20fcf7c-56a2-4c94-9dc2-4dc9449606f4" absoluteBounds="0.765, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd7bd418-5d10-44e6-814c-3d46e34e4140" absoluteBounds="3.5, 6.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MenuSystemDataContext/tblSys_Group_User_Matrix" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0c8fe84-7a76-418e-be23-268ec9891e06" absoluteBounds="3.515, 6.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ec6b342-54ba-45a1-825e-5bc5b86325ae" absoluteBounds="3.5, 2.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MenuSystemDataContext/tblSys_Folder_Group_Matrix" />
+      <nestedChildShapes>
+        <elementListCompartment Id="411615a8-9c59-4f4d-a2e0-99cb741950b3" absoluteBounds="3.515, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.751537461538462 : 6.875); (0.375 : 6.49846253846154); (0.375 : 3.47280110677083); (0.75 : 3.09780110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MenuSystemDataContext/tblSys_MenuFolder/tblSys_MenuFolder_tblSys_MenuChoice" />
+      <nodes>
+        <classShapeMoniker Id="56d61225-3b9b-4b87-9133-d929e14a7ffc" />
+        <classShapeMoniker Id="03a1020f-1dcf-4d88-8ea0-95b15bb81607" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.09780110677083); (3.125 : 3.47280110677083); (3.125 : 4.97199625651042); (3.22916666666667 : 4.97199625651042 : JumpStart); (3.39583333333333 : 4.97199625651042 : JumpEnd); (3.5 : 4.97199625651042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuSystemDataContext/tblSys_MenuChoice/tblSys_MenuChoice_tblSys_MenuChoice_Group_Matrix" />
+      <nodes>
+        <classShapeMoniker Id="03a1020f-1dcf-4d88-8ea0-95b15bb81607" />
+        <classShapeMoniker Id="a3e1c0c8-58ed-480f-a61b-e4436a13fef2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.61099812825521); (3.04166666666667 : 4.61099812825521 : JumpStart); (3.20833333333333 : 4.61099812825521 : JumpEnd); (3.22916666666667 : 4.61099812825521 : JumpStart); (3.39583333333333 : 4.61099812825521 : JumpEnd); (3.5 : 4.61099812825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuSystemDataContext/tblSys_Group/tblSys_Group_tblSys_MenuChoice_Group_Matrix" />
+      <nodes>
+        <classShapeMoniker Id="da861ad4-cc67-4c35-bef4-10c65e61d760" />
+        <classShapeMoniker Id="a3e1c0c8-58ed-480f-a61b-e4436a13fef2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.6362939453125); (3.125 : 6.0112939453125); (3.125 : 5.87408254422075); (3.25357443490112 : 6.00265697912187 : JumpStart); (3.37142556509888 : 6.12050810931963 : JumpEnd); (3.50091745577925 : 6.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MenuSystemDataContext/tblSys_Group/tblSys_Group_tblSys_Group_User_Matrix" />
+      <nodes>
+        <classShapeMoniker Id="da861ad4-cc67-4c35-bef4-10c65e61d760" />
+        <classShapeMoniker Id="cd7bd418-5d10-44e6-814c-3d46e34e4140" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.3118490375601); (3.06607443490112 : 3.99577460265897 : JumpStart); (3.18392556509888 : 3.87792347246122 : JumpEnd); (3.25357443490112 : 3.80827460265897 : JumpStart); (3.37142556509888 : 3.69042347246122 : JumpEnd); (3.4375 : 3.6243490375601); (3.4375 : 3.63149251302083); (3.5 : 3.56899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MenuSystemDataContext/tblSys_Group/tblSys_Group_tblSys_Folder_Group_Matrix" />
+      <nodes>
+        <classShapeMoniker Id="da861ad4-cc67-4c35-bef4-10c65e61d760" />
+        <classShapeMoniker Id="1ec6b342-54ba-45a1-825e-5bc5b86325ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.93807592307692); (3.3125 : 6.37557592307692); (3.3125 : 2.94074425651042); (3.5 : 2.94074425651042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuSystemDataContext/tblSys_MenuFolder/tblSys_MenuFolder_tblSys_Folder_Group_Matrix" />
+      <nodes>
+        <classShapeMoniker Id="56d61225-3b9b-4b87-9133-d929e14a7ffc" />
+        <classShapeMoniker Id="1ec6b342-54ba-45a1-825e-5bc5b86325ae" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
